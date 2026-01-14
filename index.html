@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東雲地区「乱横断・植栽踏み抜き」問題について</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .summary-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .summary-box h2 {
+            color: #e65100;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #1565c0;
+            border-bottom: 3px solid #1976d2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .section h3 {
+            color: #1976d2;
+            margin: 20px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .problem-box {
+            background: #ffebee;
+            border: 1px solid #ef9a9a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .problem-box h4 {
+            color: #c62828;
+            margin-bottom: 8px;
+        }
+
+        .solution-box {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .solution-box h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        .highlight-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .highlight-box .big-text {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        .case-card {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .case-card.best-match {
+            border-top: 4px solid #4caf50;
+        }
+
+        .case-card h4 {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .case-card .location {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .case-card blockquote {
+            background: #fff8e1;
+            border-left: 4px solid #ff8f00;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .check-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .check-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        .request-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .request-list li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .request-list li:last-child {
+            border-bottom: none;
+        }
+
+        .request-list li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #1976d2;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .key-message {
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .key-message h2 {
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1565c0;
+        }
+
+        .stat-card .label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .badge-danger {
+            background: #ffcdd2;
+            color: #c62828;
+        }
+
+        .badge-warning {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .badge-success {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 1.4em;
+            }
+        }
+
+        @media print {
+            .header {
+                background: #1565c0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>東雲地区「乱横断・植栽踏み抜き」問題</h1>
+        <p class="subtitle">にしがき誠 江東区議会議員 宛 情報提供資料</p>
+        <p style="margin-top: 15px; font-size: 0.9em;">2026年1月13日 作成：熊谷淳（江東区東雲在住）</p>
+    </div>
+
+    <div class="container">
+        <div class="summary-box">
+            <h2>3分でわかる本件</h2>
+            <p><strong>問題:</strong> 東雲キャナルコートCODAN周辺で<strong>乱横断</strong>（横断歩道以外での道路横断）と<strong>植栽踏み抜き</strong>が常態化</p>
+            <p style="margin-top: 10px;"><strong>キーワード:</strong> 交通安全 ｜ 通学路の危険 ｜ 地域環境の悪化</p>
+        </div>
+
+        <!-- 問題の概要 -->
+        <div class="section">
+            <h2>何が起きているのか</h2>
+
+            <h3>場所</h3>
+            <p><strong>東雲キャナルコートCODAN 11号棟周辺</strong>（特別区道江562、ダブルコンフォートタワーズ前）</p>
+
+            <h3>確認されている問題行為</h3>
+
+            <div class="problem-box">
+                <h4>問題① 乱横断</h4>
+                <p>ガードレールをすり抜けて<strong>横断歩道以外で道路横断</strong></p>
+                <p><span class="badge badge-danger">道路交通法第13条違反の可能性</span></p>
+            </div>
+
+            <div class="problem-box">
+                <h4>問題② 植栽踏み抜き</h4>
+                <p>ショートカットのため植栽を踏み荒らし<strong>「獣道」を形成</strong></p>
+                <p><span class="badge badge-warning">泥流出による歩道汚損</span></p>
+            </div>
+
+            <div class="problem-box">
+                <h4>問題③ 子どもへの悪影響</h4>
+                <p>大人の危険行為を<strong>子どもが模倣</strong>している</p>
+                <p><span class="badge badge-danger">通学路としての安全性に懸念</span></p>
+            </div>
+        </div>
+
+        <!-- なぜ今相談するのか -->
+        <div class="section">
+            <h2>なぜにしがき議員にご相談するのか</h2>
+
+            <ul class="check-list">
+                <li><strong>交通安全のエキスパート</strong>：江東区議会で交通安全関連<strong>486件</strong>の発言実績</li>
+                <li><strong>地元・豊洲地区</strong>：活動エリアが東雲に隣接</li>
+                <li><strong>PTA経験</strong>：子どもの安全に高い関心をお持ち</li>
+                <li><strong>柔軟な対応</strong>：独立系無所属議員として党派を超えた活動が可能</li>
+            </ul>
+        </div>
+
+        <!-- 全国事例 -->
+        <div class="section">
+            <h2>全国の類似事例</h2>
+
+            <p>全国約500自治体の議会議事録を検索した結果、同様の問題が複数議論されています。</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">157件</div>
+                    <div class="label">「乱横断」ヒット</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">170件</div>
+                    <div class="label">「横断防止柵」ヒット</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">340件</div>
+                    <div class="label">「歩道 通行」ヒット</div>
+                </div>
+            </div>
+
+            <div class="case-card best-match">
+                <h4>朝霞市（埼玉県）<span class="badge badge-success">本件と同一の問題構造</span></h4>
+                <p class="location">北朝霞駅前広場</p>
+                <blockquote>
+                    「植樹帯と併設されている<strong>横断防止柵</strong>につきましては、広場利用者の一部の方による<strong>低木への踏みつけ、柵の破損</strong>が目につき」
+                </blockquote>
+            </div>
+
+            <div class="case-card">
+                <h4>寝屋川市（大阪府）<span class="badge badge-warning">実態調査の好例</span></h4>
+                <blockquote>
+                    「歩道橋下の乱横断 <strong>1,265人/日</strong>」
+                </blockquote>
+                <p>→ 数値による実態把握が対策の根拠に</p>
+            </div>
+
+            <div class="case-card">
+                <h4>名古屋市（愛知県）</h4>
+                <blockquote>
+                    「横断防止柵の高さ <strong>80cm</strong> が基準」
+                </blockquote>
+                <p>→ 具体的な設計基準が存在</p>
+            </div>
+        </div>
+
+        <!-- 要望事項 -->
+        <div class="section">
+            <h2>ご支援のお願い</h2>
+
+            <h3>短期（1〜2週間）</h3>
+            <ul class="request-list">
+                <li><strong>江東区土木部への照会</strong><br>横断防止柵設置の可能性、乱横断の実態把握調査</li>
+                <li><strong>東京湾岸警察署への相談仲介</strong><br>交通安全指導の強化</li>
+            </ul>
+
+            <h3>中長期（1〜3ヶ月）</h3>
+            <ul class="request-list">
+                <li><strong>関係者協議の場の設定</strong><br>東急住宅リース、ダブルコンフォートタワーズ管理組合、区との協議</li>
+                <li><strong>議会での問題提起</strong><br>建設委員会等での質問（任意）</li>
+            </ul>
+        </div>
+
+        <!-- 補足情報 -->
+        <div class="section">
+            <h2>補足情報</h2>
+
+            <h3>私の立場について</h3>
+            <p>本件は私が直接の利害関係者ではありません。しかし、江東区の公共空間の汚損と交通マナーの悪化は、<strong>地域住民として無関心ではいられない</strong>問題です。「情報提供」という形でご相談させていただきます。</p>
+
+            <h3>詳細資料</h3>
+            <table>
+                <tr>
+                    <th>資料名</th>
+                    <th>内容</th>
+                    <th>提供方法</th>
+                </tr>
+                <tr>
+                    <td>全国事例集</td>
+                    <td>議事録検索結果の詳細</td>
+                    <td>Googleドライブ</td>
+                </tr>
+                <tr>
+                    <td>現地写真</td>
+                    <td>乱横断・植栽踏み抜きの状況</td>
+                    <td>Googleドライブ</td>
+                </tr>
+                <tr>
+                    <td>朝霞市議事録</td>
+                    <td>該当箇所の全文</td>
+                    <td>Googleドライブ</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- キーメッセージ -->
+        <div class="key-message">
+            <h2>「事故が起きてからでは遅い」</h2>
+            <p>八街市の教訓を忘れずに、予防的措置を講じることが重要です。</p>
+        </div>
+
+        <div class="footer">
+            <p>本資料は、全国約500自治体の議会議事録データベースを検索して作成しました。</p>
+            <p style="margin-top: 10px;">
+                <strong>連絡先：</strong>熊谷 淳<br>
+                江東区東雲○-○-○ ｜ メール: [メールアドレス]
+            </p>
+        </div>
+    </div>
+</body>
+</html>
