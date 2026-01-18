@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東雲地区の交通安全対策：議員用資料</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #1565c0;
+            border-bottom: 3px solid #1976d2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .section h3 {
+            color: #1976d2;
+            margin: 25px 0 15px;
+            font-size: 1.1em;
+        }
+
+        .section h4 {
+            color: #333;
+            margin: 15px 0 10px;
+            font-size: 1em;
+        }
+
+        .objection-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .objection-header {
+            background: #ffebee;
+            padding: 15px;
+            border-bottom: 1px solid #ffcdd2;
+        }
+
+        .objection-header h3 {
+            color: #c62828;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .objection-header h3::before {
+            content: "❓";
+        }
+
+        .objection-content {
+            padding: 15px;
+            background: #fafafa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .objection-content h4 {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .response-content {
+            padding: 15px;
+            background: #e8f5e9;
+        }
+
+        .response-content h4 {
+            color: #2e7d32;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .response-content h4::before {
+            content: "✅";
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e3f2fd;
+            color: #1565c0;
+            font-weight: bold;
+        }
+
+        .quote-box {
+            background: #fff8e1;
+            border-left: 4px solid #ff8f00;
+            padding: 12px 15px;
+            margin: 10px 0;
+            font-size: 0.95em;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .info-box h4 {
+            color: #1565c0;
+            margin-bottom: 8px;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .success-box h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border: 1px solid #ffb74d;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .warning-box h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        .key-point {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .key-point h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        .toc {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .toc h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            padding: 5px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .toc li:last-child {
+            border-bottom: none;
+        }
+
+        .toc a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .summary-table th {
+            background: #1565c0;
+            color: white;
+        }
+
+        .highlight-row {
+            background: #fff8e1 !important;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        @media print {
+            .header {
+                background: #1565c0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+
+            .objection-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>東雲地区の交通安全対策：議員用資料</h1>
+        <p class="subtitle">全国自治体の議論分析と政策提案サンプル</p>
+        <span class="badge">📋 議員手持ち資料（非配布）</span>
+    </div>
+
+    <div class="container">
+        <div class="toc">
+            <h3>📋 目次</h3>
+            <ul>
+                <li><a href="#cases">1. 全国自治体の関連事例</a>（本資料の核心）</li>
+                <li><a href="#nudge">2. ナッジ理論の実践事例</a></li>
+                <li><a href="#service">3. 議会議事録分析サービスのご案内</a></li>
+                <li><a href="#proposal">4. 本件提案の概要</a></li>
+                <li><a href="#support">5. ご支援のお願い</a></li>
+                <li><a href="#qa">6. 想定問答集</a></li>
+                <li><a href="#appendix">7. 補足情報・参考リンク</a></li>
+            </ul>
+        </div>
+
+        <!-- 全国自治体の関連事例 -->
+        <div class="section" id="cases">
+            <h2>📊 全国自治体の関連事例</h2>
+
+            <div class="key-point" style="margin-bottom: 25px;">
+                <h4>💡 本セクションの意義</h4>
+                <p>議会議事録・議会だよりは<strong>オープンデータ</strong>でありながら、事実上の<strong>ディープウェブ</strong>に格納されており、通常の検索エンジンでは発見できません。</p>
+                <p style="margin-top: 10px;">当プロジェクトでは、全国自治体の議事録データを<strong>専用サーバーに収集し分析</strong>することで、目立たないが重要な議論を発掘しています。</p>
+                <p style="margin-top: 10px;"><strong>→ 以下の事例は、通常のWeb検索では見つからない「埋もれた知見」です。</strong></p>
+            </div>
+
+            <h3>🏛️ 類似問題を抱える自治体の議論一覧</h3>
+
+            <p style="margin-bottom: 15px;">東雲地区と同様の<strong>乱横断・植栽被害</strong>問題は、全国各地で議論されています。以下は議会議事録から抽出した事例一覧です。</p>
+
+            <table>
+                <tr>
+                    <th style="width: 12%;">自治体</th>
+                    <th style="width: 15%;">問題</th>
+                    <th style="width: 40%;">議会での議論内容（要約）</th>
+                    <th style="width: 18%;">示唆・参考点</th>
+                    <th style="width: 15%;">出典</th>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>朝霞市</strong><br>（埼玉県）</td>
+                    <td>植樹帯踏みつけ・柵破損</td>
+                    <td>「低木への踏みつけ、柵の破損が目につき、<strong>修繕を繰り返している</strong>」</td>
+                    <td>東雲と同一構造。物理的対策の限界</td>
+                    <td>建設常任委員会</td>
+                </tr>
+                <tr>
+                    <td><strong>寝屋川市</strong><br>（大阪府）</td>
+                    <td>歩道橋下の乱横断</td>
+                    <td>「乱横断者数<strong>1,265人/日</strong>。この数字を根拠に警察と協議」</td>
+                    <td>定量調査が対策の根拠に</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>名古屋市</strong><br>（愛知県）</td>
+                    <td>乱横断防止柵基準</td>
+                    <td>「乱横断防止柵の高さは<strong>80センチ</strong>を基準」</td>
+                    <td>全国的な設計基準</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>金沢市</strong><br>（石川県）</td>
+                    <td>乱横断対策</td>
+                    <td>「<strong>看板付き横断防止柵</strong>設置。幅3m、高さ80cm」</td>
+                    <td>物理+啓発の組み合わせ</td>
+                    <td>建設委員会</td>
+                </tr>
+                <tr>
+                    <td><strong>東大阪市</strong><br>（大阪府）</td>
+                    <td>乱横断防止</td>
+                    <td>「<strong>布施警察署の要望</strong>に基づき柵設置」</td>
+                    <td>警察連携で予算措置円滑化</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>高槻市</strong><br>（大阪府）</td>
+                    <td>歩車分離</td>
+                    <td>「柵設置で<strong>歩車分離式信号へ誘導</strong>」</td>
+                    <td>横断歩道への誘導戦略</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>さいたま市</strong><br>（埼玉県）</td>
+                    <td>駅前乱横断</td>
+                    <td>「<strong>歩行者デッキ整備</strong>で根本解決」</td>
+                    <td>大規模インフラ整備例</td>
+                    <td>都市計画審議会</td>
+                </tr>
+                <tr>
+                    <td><strong>船橋市</strong><br>（千葉県）</td>
+                    <td>駅前乱横断</td>
+                    <td>「<strong>横断歩道増設+柵設置</strong>で対応」</td>
+                    <td>複合的対策</td>
+                    <td>建設委員会</td>
+                </tr>
+                <tr>
+                    <td><strong>豊中市</strong><br>（大阪府）</td>
+                    <td>バス停周辺乱横断</td>
+                    <td>「高齢者の乱横断が多く、<strong>バリアフリー動線</strong>の再検討」</td>
+                    <td>高齢者対応の視点</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>堺市</strong><br>（大阪府）</td>
+                    <td>商店街乱横断</td>
+                    <td>「買い物客の乱横断。<strong>路面カラー舗装</strong>で対応」</td>
+                    <td>視覚的誘導手法</td>
+                    <td>建設委員会</td>
+                </tr>
+                <tr>
+                    <td><strong>西宮市</strong><br>（兵庫県）</td>
+                    <td>駅前植栽踏み荒らし</td>
+                    <td>「駅前広場の植栽が踏み荒らされ<strong>景観が悪化</strong>」</td>
+                    <td>景観問題としての認識</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>吹田市</strong><br>（大阪府）</td>
+                    <td>歩道橋回避乱横断</td>
+                    <td>「歩道橋を避けて乱横断。<strong>エレベーター設置</strong>を要望」</td>
+                    <td>バリアフリー対応</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>相模原市</strong><br>（神奈川県）</td>
+                    <td>通学路乱横断</td>
+                    <td>「通学路での乱横断。<strong>PTAと連携</strong>した啓発活動」</td>
+                    <td>地域連携の重要性</td>
+                    <td>文教委員会</td>
+                </tr>
+                <tr>
+                    <td><strong>八王子市</strong><br>（東京都）</td>
+                    <td>駅周辺乱横断</td>
+                    <td>「駅前整備に合わせて<strong>横断抑止デザイン</strong>を導入」</td>
+                    <td>デザイン思考の活用</td>
+                    <td>都市計画審議会</td>
+                </tr>
+                <tr>
+                    <td><strong>柏市</strong><br>（千葉県）</td>
+                    <td>ショッピングモール周辺</td>
+                    <td>「大型商業施設周辺の乱横断。<strong>誘導サイン</strong>設置」</td>
+                    <td>サイン計画の重要性</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>越谷市</strong><br>（埼玉県）</td>
+                    <td>植栽帯ショートカット</td>
+                    <td>「植栽帯を踏み越えるショートカット。<strong>低木の補植</strong>で対応」</td>
+                    <td>植栽による物理的抑止</td>
+                    <td>建設委員会</td>
+                </tr>
+                <tr>
+                    <td><strong>所沢市</strong><br>（埼玉県）</td>
+                    <td>駅前広場乱横断</td>
+                    <td>「バス乗り場への乱横断。<strong>床面サイン</strong>で誘導」</td>
+                    <td>床面サインの活用</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>町田市</strong><br>（東京都）</td>
+                    <td>商業地区乱横断</td>
+                    <td>「買い物客の乱横断が常態化。<strong>歩行者天国</strong>の拡大を検討」</td>
+                    <td>歩行者優先空間の創出</td>
+                    <td>都市計画審議会</td>
+                </tr>
+                <tr>
+                    <td><strong>藤沢市</strong><br>（神奈川県）</td>
+                    <td>海岸通り乱横断</td>
+                    <td>「観光客の乱横断。<strong>啓発看板</strong>と<strong>柵</strong>の組み合わせ」</td>
+                    <td>観光地特有の課題</td>
+                    <td>本会議</td>
+                </tr>
+                <tr>
+                    <td><strong>茅ヶ崎市</strong><br>（神奈川県）</td>
+                    <td>駅南口乱横断</td>
+                    <td>「駅前ロータリーの乱横断。<strong>横断歩道の視認性向上</strong>を実施」</td>
+                    <td>視認性向上の重要性</td>
+                    <td>建設委員会</td>
+                </tr>
+            </table>
+
+            <h3 style="margin-top: 30px;">📰 議会だよりからの関連記事</h3>
+            <p style="margin-bottom: 15px;">議会だよりは各自治体が発行する広報紙で、議員の質問・要望の概要が掲載されています。通常の検索では発見困難ですが、当プロジェクトのデータベースから抽出しました。</p>
+
+            <table>
+                <tr>
+                    <th style="width: 15%;">自治体</th>
+                    <th style="width: 15%;">議員名</th>
+                    <th style="width: 50%;">記事内容（要約）</th>
+                    <th style="width: 20%;">出典</th>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>尼崎市</strong><br>（兵庫県）</td>
+                    <td>松岡洋司 議員</td>
+                    <td>県道尼宝線の危険箇所における横断時の安全対策について質問。<strong>歩行者の行動パターンを踏まえた対策</strong>の必要性を指摘。</td>
+                    <td>議会だより156号</td>
+                </tr>
+                <tr>
+                    <td><strong>松戸市</strong><br>（千葉県）</td>
+                    <td>高橋伸之 議員</td>
+                    <td>北松戸駅東口のロータリーにおける乱横断対策を要望。<strong>柵だけでは効果が限定的</strong>との認識を示す。</td>
+                    <td>議会だより236号</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>川崎市</strong><br>（神奈川県）</td>
+                    <td>斎藤伸志 議員</td>
+                    <td>小田急新百合ヶ丘駅周辺の再整備、横断防止柵の設置について。<strong>景観との調和</strong>を重視した提案。</td>
+                    <td>議会だより112号</td>
+                </tr>
+                <tr>
+                    <td><strong>伊万里市</strong><br>（佐賀県）</td>
+                    <td>-</td>
+                    <td>伊万里大通りの一部が<strong>横断禁止規制区域</strong>に指定。規制強化による対応事例。</td>
+                    <td>議会だより32号</td>
+                </tr>
+                <tr>
+                    <td><strong>明石市</strong><br>（兵庫県）</td>
+                    <td>-</td>
+                    <td>17号池魚住みんな公園の利用方法と安全対策について。<strong>公園内の動線設計</strong>の議論。</td>
+                    <td>議会だより262号</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>横浜市</strong><br>（神奈川県）</td>
+                    <td>複数議員</td>
+                    <td>みなとみらい地区の歩行者動線整備と乱横断防止策。<strong>デザイン性と安全性の両立</strong>を議論。</td>
+                    <td>建設委員会報告</td>
+                </tr>
+                <tr>
+                    <td><strong>神戸市</strong><br>（兵庫県）</td>
+                    <td>-</td>
+                    <td>三宮駅周辺の歩行者ネットワーク整備計画。<strong>歩行者優先のまちづくり</strong>の一環。</td>
+                    <td>都市計画審議会</td>
+                </tr>
+            </table>
+
+            <div class="success-box" style="margin-top: 25px;">
+                <h4>🔍 議事録データベースの価値</h4>
+                <p>上記の事例は、<strong>通常のGoogle検索では発見できない</strong>ものです。各自治体の議事録検索システムは独立しており、横断的な検索が困難です。</p>
+                <p style="margin-top: 10px;">当プロジェクトでは、全国の議事録データを収集・統合することで、<strong>自治体を超えた知見の共有</strong>を可能にしています。</p>
+                <p style="margin-top: 10px;"><strong>→ 「他の自治体ではどうしているか？」という質問に、データに基づいて回答できます。</strong></p>
+            </div>
+        </div>
+
+        <!-- ナッジ理論の実践事例 -->
+        <div class="section" id="nudge">
+            <h2>🧠 ナッジ理論の実践事例</h2>
+
+            <p style="margin-bottom: 20px;">「規制」ではなく「設計」で行動変容を促すナッジ理論は、世界各地で実践されています。</p>
+
+            <h3>🌍 海外のナッジ事例</h3>
+
+            <table>
+                <tr>
+                    <th>事例名</th>
+                    <th>場所</th>
+                    <th>対策内容</th>
+                    <th>効果</th>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>グリーンフットプリント</strong></td>
+                    <td>コペンハーゲン（デンマーク）</td>
+                    <td>ゴミ箱へ誘導する緑色の足跡をペイント</td>
+                    <td>ポイ捨て<strong>46%減少</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>ピアノ階段</strong></td>
+                    <td>ストックホルム（スウェーデン）</td>
+                    <td>階段を鍵盤デザインにし、踏むと音が鳴る</td>
+                    <td>階段利用<strong>66%増加</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>道路アート</strong></td>
+                    <td>カンザスシティ（アメリカ）</td>
+                    <td>交差点に大型アート作品を設置</td>
+                    <td>車速度<strong>45%低下</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>トイレの的</strong></td>
+                    <td>スキポール空港（オランダ）</td>
+                    <td>男性用トイレにハエの絵を描く</td>
+                    <td>床の汚れ<strong>80%減少</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>電気使用量比較表示</strong></td>
+                    <td>カリフォルニア州（アメリカ）</td>
+                    <td>近隣世帯との電気使用量を比較表示</td>
+                    <td>節電行動の<strong>顕著な増加</strong></td>
+                </tr>
+            </table>
+
+            <h3>🇯🇵 国内のナッジ事例</h3>
+
+            <table>
+                <tr>
+                    <th>事例</th>
+                    <th>自治体</th>
+                    <th>対策内容</th>
+                    <th>効果・状況</th>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>子どもの絵で違法駐輪抑止</strong></td>
+                    <td>静岡市（静岡県）</td>
+                    <td>小学生の絵を路面に大型ステッカー化</td>
+                    <td>「踏みたくない」心理で駐輪抑止</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>子どもの絵で放置自転車対策</strong></td>
+                    <td>川崎市（神奈川県）</td>
+                    <td>東門前小6年生126人の絵を路面シート化（140枚）</td>
+                    <td>放置自転車約50台/日の抑止</td>
+                </tr>
+                <tr>
+                    <td><strong>おしチャリナッジ</strong></td>
+                    <td>狛江市（東京都）</td>
+                    <td>駅前通路での自転車乗車マナー啓発</td>
+                    <td>ナッジ手法の自治体導入例</td>
+                </tr>
+                <tr>
+                    <td><strong>ピアノ階段</strong></td>
+                    <td>JR岐阜駅 ACTIVE G</td>
+                    <td>日本初のピアノ階段（2012年導入）</td>
+                    <td>エスカレーター利用者の階段転換</td>
+                </tr>
+                <tr>
+                    <td><strong>足跡誘導</strong></td>
+                    <td>各地コンビニ</td>
+                    <td>レジ前に足跡マークを設置</td>
+                    <td>自然な列形成</td>
+                </tr>
+                <tr>
+                    <td><strong>受動喫煙防止ナッジ</strong></td>
+                    <td>横浜市（神奈川県）</td>
+                    <td>喫煙所の「見える化」と誘導デザイン</td>
+                    <td>路上喫煙の減少</td>
+                </tr>
+                <tr>
+                    <td><strong>健康づくりナッジ</strong></td>
+                    <td>八王子市（東京都）</td>
+                    <td>健診受診勧奨にナッジ手法を活用</td>
+                    <td>受診率向上</td>
+                </tr>
+            </table>
+
+            <div class="key-point">
+                <h4>🔑 本提案への応用</h4>
+                <p>静岡市・川崎市の「子どもの絵」手法を<strong>乱横断・植栽踏み抜き防止</strong>に応用。</p>
+                <p style="margin-top: 10px;">コペンハーゲンの「足跡ペイント」を横断歩道への誘導に活用。</p>
+                <p style="margin-top: 10px;">→ <strong>規制（柵・看板）ではなく「設計」で行動変容を促す</strong></p>
+            </div>
+        </div>
+
+        <!-- 議会議事録分析サービス -->
+        <div class="section" id="service">
+            <h2>💼 議会議事録分析サービスのご案内</h2>
+
+            <div class="success-box">
+                <h4>全国自治体の議事録データを収集・分析し、議員の調査活動をサポートします</h4>
+                <p style="margin-top: 10px;">本資料は、当サービスで作成した調査資料のサンプルです。</p>
+                <p style="margin-top: 10px;"><strong>政策立案は議員が主体</strong>です。当方は調査・分析・資料作成を通じて、議員の活動を裏方としてサポートいたします。</p>
+            </div>
+
+            <h3>提供できる情報</h3>
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>内容</th>
+                </tr>
+                <tr>
+                    <td><strong>全国議事録検索</strong></td>
+                    <td>特定のキーワードに関する全国自治体の議論を網羅的に検索</td>
+                </tr>
+                <tr>
+                    <td><strong>先行事例の抽出</strong></td>
+                    <td>類似問題を解決した自治体の事例を整理</td>
+                </tr>
+                <tr>
+                    <td><strong>調査資料の作成</strong></td>
+                    <td>調査結果を踏まえた参考資料（本資料のようなもの）を作成</td>
+                </tr>
+                <tr>
+                    <td><strong>想定問答集の作成</strong></td>
+                    <td>議会質問や住民説明に備えたQ&A資料を作成</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <h4>💡 このサービスの特徴</h4>
+                <ul>
+                    <li>議員の多忙な日程でも、<strong>調査・資料作成の時間を短縮</strong></li>
+                    <li>全国の事例を踏まえた<strong>説得力のあるエビデンス</strong>を提供</li>
+                    <li>本資料のような<strong>詳細な参考資料</strong>を迅速に作成</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 本件サンプル案件提案の概要 -->
+        <div class="section" id="proposal">
+            <h2>📋 本件サンプル案件提案の概要</h2>
+
+            <p>東雲キャナルコートCODAN周辺で発生している<strong>乱横断・植栽踏み抜き問題</strong>に対し、「ナッジ理論」を活用した解決策を提案します。</p>
+
+            <h3>課題の整理</h3>
+            <table>
+                <tr>
+                    <th>課題</th>
+                    <th>場所</th>
+                    <th>管轄</th>
+                    <th>対策案</th>
+                </tr>
+                <tr>
+                    <td><strong>🔴 乱横断</strong><br>ガードレールすり抜け</td>
+                    <td>区道側</td>
+                    <td>江東区</td>
+                    <td>足跡ペイント、路面アート、社会的証明表示</td>
+                </tr>
+                <tr>
+                    <td><strong>🟡 植栽踏み抜き</strong><br>Desire Path形成</td>
+                    <td>キャナルコート側</td>
+                    <td>東急住宅リース</td>
+                    <td>子どもの花壇、コミュニティガーデン</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <h4>提案の核心</h4>
+                <p>「<strong>近隣の小中学校の子どもたちが育てた花壇を、大人が踏んでショートカットするのか？</strong>」</p>
+                <p style="margin-top: 10px;">規制（柵・看板）ではなく、心理的抵抗を活用した「設計」で行動変容を促す。</p>
+            </div>
+
+            <!-- 良好な植栽整備の参考事例 -->
+            <h3 style="margin-top: 30px; color: #2e7d32; border-bottom: 2px solid #2e7d32; padding-bottom: 8px;">📸 参考：良好な植栽整備事例（同地区内）</h3>
+            <p style="margin: 15px 0; color: #555;">同じ東雲キャナルコート地区内でも、植栽が適切に整備されている場所では乱横断・違法駐輪が発生していません。<strong>「きちんと管理されている場所では、身勝手な行為が発生しない」</strong>ことを示すエビデンスです。これは環境犯罪学の<a href="broken-windows.html" style="color: #5c6bc0;"><strong>「割れ窓理論」</strong></a>の実例でもあります。</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                <figure class="photo-item">
+                    <a href="images/IMG_6846.jpg" target="_blank">
+                        <img src="images/IMG_6846.jpg" alt="キャナルファースト前歩道①" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
+                    </a>
+                    <figcaption style="text-align: center; color: #666; margin-top: 8px; font-size: 0.9em;">
+                        <span style="color: #2e7d32;"><strong>【参考1】キャナルファースト前歩道①</strong></span><br>
+                        建物側（公開空地）は植栽整備と駐輪規制あり
+                    </figcaption>
+                </figure>
+                <figure class="photo-item">
+                    <a href="images/IMG_6835.jpg" target="_blank">
+                        <img src="images/IMG_6835.jpg" alt="キャナルファースト前歩道②" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
+                    </a>
+                    <figcaption style="text-align: center; color: #666; margin-top: 8px; font-size: 0.9em;">
+                        <span style="color: #c62828;"><strong>【参考2】キャナルファースト前歩道②</strong></span><br>
+                        ガードレール側は植栽なし→違法駐輪が常態化
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                <figure class="photo-item">
+                    <a href="images/IMG_6845.jpg" target="_blank">
+                        <img src="images/IMG_6845.jpg" alt="キャナルファースト前歩道③" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
+                    </a>
+                    <figcaption style="text-align: center; color: #666; margin-top: 8px; font-size: 0.9em;">
+                        <span style="color: #2e7d32;"><strong>【参考3】キャナルファースト前歩道③</strong></span><br>
+                        住民有志によるガーデニングが実施されている
+                    </figcaption>
+                </figure>
+                <figure class="photo-item">
+                    <a href="images/IMG_6847.jpg" target="_blank">
+                        <img src="images/IMG_6847.jpg" alt="キャナルコート18号棟前歩道" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
+                    </a>
+                    <figcaption style="text-align: center; color: #666; margin-top: 8px; font-size: 0.9em;">
+                        <span style="color: #2e7d32;"><strong>【参考4】キャナルコート18号棟前歩道</strong></span><br>
+                        ガードレール付随の植栽が整備 ＝ 本来はこうあるべき姿
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="success-box" style="margin-top: 20px;">
+                <h4>💡 この事例が示すこと</h4>
+                <p><strong>植栽が整備されていないと、乱横断だけでなく違法駐輪も常態化します。</strong></p>
+                <p style="margin-top: 10px;">キャナルファースト前では、マンション建物側（公開空地）で植栽整備と駐輪規制があるため、歩道側（江東区側）の植栽のチープさが際立ち、違法駐輪が常態化しています。</p>
+                <p style="margin-top: 10px;">一方、18号棟前は公開空地がない狭い歩道にもかかわらず、ガードレール付随の植栽がしっかり整備されており、近隣の歯科医院スタッフが毎朝手入れしている様子も確認されています。</p>
+                <p style="margin-top: 10px;"><strong>→ 「きちんと管理されている場所では、身勝手な行為が発生しない」という提案の根拠を裏付けています。</strong></p>
+            </div>
+        </div>
+
+        <!-- ご支援のお願い -->
+        <div class="section" id="support">
+            <h2>🙏 ご支援のお願い</h2>
+
+            <div class="success-box">
+                <h4>にしがき議員にお願いしたいこと</h4>
+                <table>
+                    <tr>
+                        <th>項目</th>
+                        <th>内容</th>
+                        <th>優先度</th>
+                    </tr>
+                    <tr>
+                        <td><strong>区役所への働きかけ</strong></td>
+                        <td>土木部・水辺と緑の課への提案、予算措置の要請</td>
+                        <td>高</td>
+                    </tr>
+                    <tr>
+                        <td><strong>近隣学校との連携</strong></td>
+                        <td>校長・PTAへの打診、花壇活動への協力依頼</td>
+                        <td>高</td>
+                    </tr>
+                    <tr>
+                        <td><strong>自治会立ち上げ支援</strong></td>
+                        <td>マンション間連携の自治会設立に向けた助言</td>
+                        <td>中</td>
+                    </tr>
+                    <tr>
+                        <td><strong>東急住宅リースへの橋渡し</strong></td>
+                        <td>区を通じた協力要請</td>
+                        <td>中</td>
+                    </tr>
+                    <tr>
+                        <td><strong>湾岸警察署との連携</strong></td>
+                        <td>交通安全啓発活動としての協力依頼</td>
+                        <td>中</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 想定問答集（別ファイル参照） -->
+        <div class="section" id="qa">
+            <h2>❓ 想定問答集</h2>
+            <p>本提案に対して予想される質問と回答を整理しました。</p>
+            <p style="margin-top: 15px;"><a href="qa.html" style="color: #1976d2; font-size: 1.1em;"><strong>→ 想定問答集を見る（別ページ）</strong></a></p>
+            <p style="margin-top: 10px; color: #666; font-size: 0.9em;">※ 議会質問や住民説明の参考としてご活用ください</p>
+        </div>
+
+        <!-- 補足情報・参考リンク -->
+        <div class="section" id="appendix">
+            <h2>📎 補足情報・参考リンク</h2>
+
+            <h3>📄 添付資料一覧</h3>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>資料名</th>
+                    <th>内容</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>配布用資料（HTML）</td>
+                    <td>一般配布用の提案概要（index.html）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>現地写真・マップ</td>
+                    <td>乱横断・植栽踏み抜きの実態写真、問題エリアマップ</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ナッジ理論解説</td>
+                    <td>中学生にもわかる行動経済学の基礎（nudge-theory.html）</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Desire Path解説</td>
+                    <td>「欲望の小道」の形成メカニズムと対策（desire-path.html）</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>割れ窓理論解説</td>
+                    <td>環境犯罪学と植栽整備の関連（broken-windows.html）</td>
+                </tr>
+            </table>
+
+            <h3 style="margin-top: 20px;">🔗 参考リンク</h3>
+            <ul>
+                <li><a href="https://www.city.koto.lg.jp/470132/machizukuri/midori/shizen/7490.html" target="_blank">江東区コミュニティガーデン制度</a></li>
+                <li><a href="https://shizuokagourmet.com/2014/01/15/pavement-art-illegal-bicycle-parking-childrens-drawings-posters-in-shizuoka-city/" target="_blank">静岡市「子どもの絵」事例（写真あり）</a></li>
+                <li><a href="https://www.kanaloco.jp/news/life/entry-65537.html" target="_blank">川崎市 東門前小学校事例（神奈川新聞）</a></li>
+                <li><a href="nudge-theory.html">ナッジ理論解説（当サイト）</a></li>
+                <li><a href="desire-path.html">Desire Path解説（当サイト）</a></li>
+                <li><a href="broken-windows.html">割れ窓理論解説（当サイト）</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer">
+            <p>本資料は議員への説明・質疑応答の参考資料として作成しました</p>
+            <p>※ 非配布資料：議員手持ち用</p>
+        </div>
+    </div>
+</body>
+</html>

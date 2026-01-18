@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>割れ窓理論とは？ - 中学生にもわかる解説</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5c6bc0 0%, #7986cb 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #3949ab;
+            border-bottom: 3px solid #5c6bc0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .section h3 {
+            color: #303f9f;
+            margin: 20px 0 10px;
+            font-size: 1.1em;
+        }
+
+        .highlight-box {
+            background: #e8eaf6;
+            border-left: 4px solid #5c6bc0;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        .highlight-box strong {
+            color: #303f9f;
+        }
+
+        .example-card {
+            background: #fff;
+            border: 1px solid #c5cae9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .example-card h4 {
+            color: #3949ab;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .example-card p {
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8eaf6;
+            color: #303f9f;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border: 1px solid #ffb74d;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .warning-box h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        .warning-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .info-box h4 {
+            color: #1565c0;
+            margin-bottom: 8px;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .success-box h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .mechanism-box {
+            background: #fce4ec;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .flow-step {
+            background: white;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-left: 4px solid #c2185b;
+        }
+
+        .step-num {
+            display: inline-block;
+            background: #c2185b;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .mechanism-box strong {
+            color: #c2185b;
+        }
+
+        .arrow-flow {
+            text-align: center;
+            font-size: 1.5em;
+            color: #c2185b;
+            margin: 5px 0;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .summary-box p {
+            font-size: 1.1em;
+            color: #303f9f;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #5c6bc0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .reference {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .reference h4 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .reference ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference li {
+            padding: 5px 0;
+            color: #777;
+        }
+
+        .comparison-table {
+            margin: 20px 0;
+        }
+
+        .arrow-flow {
+            text-align: center;
+            font-size: 1.5em;
+            color: #5c6bc0;
+            margin: 10px 0;
+        }
+
+        .shinonome-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .shinonome-box h4 {
+            color: #e65100;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        @media print {
+            .header {
+                background: #5c6bc0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>割れ窓理論とは？</h1>
+        <p class="subtitle">Broken Windows Theory ― 環境犯罪学の基礎</p>
+    </div>
+
+    <div class="container">
+        <!-- ひとことで言うと -->
+        <div class="section">
+            <h2>ひとことで言うと</h2>
+            <div class="highlight-box">
+                <strong>「小さな乱れを放置すると、やがて大きな問題に発展する」</strong> という環境犯罪学の理論です。
+            </div>
+            <p>「割れ窓（Broken Windows）」という名前は、「建物の窓が1枚割れているのを放置すると、やがて他の窓も全て割られてしまう」という比喩から来ています。</p>
+        </div>
+
+        <!-- 誕生と背景 -->
+        <div class="section">
+            <h2>誕生と背景</h2>
+            <p>この理論は、アメリカの犯罪学者<strong>ジョージ・ケリング</strong>と政治学者<strong>ジェームズ・Q・ウィルソン</strong>が1982年に『アトランティック・マンスリー』誌に発表した論文で提唱されました。</p>
+
+            <div class="info-box">
+                <h4>理論が生まれた背景</h4>
+                <p>1972年、アメリカ警察財団は犯罪抑止のための大規模な実験を行いました。警察官の徒歩パトロールを強化した結果、<strong>犯罪発生率は変わらなかった</strong>ものの、住民の<strong>「体感治安」は大きく向上</strong>しました。</p>
+                <p style="margin-top: 10px;">ケリングはこの結果に着目し、「秩序ある環境が人々の安心感を高め、犯罪を抑止する」という仮説を立てました。</p>
+            </div>
+        </div>
+
+        <!-- メカニズム -->
+        <div class="section">
+            <h2>なぜ「割れ窓」が問題を招くのか？</h2>
+            <p>この理論が説明する「治安悪化のメカニズム」は次の通りです：</p>
+
+            <div class="mechanism-box">
+                <div class="flow-step"><span class="step-num">1</span><strong>割れた窓の放置</strong><br>「誰もこの地域に関心を払っていない」というサインになる</div>
+                <div class="arrow-flow">↓</div>
+                <div class="flow-step"><span class="step-num">2</span><strong>軽い違反行為の発生</strong><br>ゴミのポイ捨て、落書き、違法駐輪などが起きるようになる</div>
+                <div class="arrow-flow">↓</div>
+                <div class="flow-step"><span class="step-num">3</span><strong>住民のモラル低下</strong><br>「みんなやってるから」と規範意識が薄れる</div>
+                <div class="arrow-flow">↓</div>
+                <div class="flow-step"><span class="step-num">4</span><strong>環境のさらなる悪化</strong><br>より重大な犯罪も起きやすくなる</div>
+            </div>
+
+            <p>つまり、<strong>小さな無秩序を放置することが、さらなる無秩序を招く「負のスパイラル」を生む</strong>という考え方です。</p>
+        </div>
+
+        <!-- ニューヨークの事例 -->
+        <div class="section">
+            <h2>最も有名な実践：ニューヨーク市の事例</h2>
+
+            <p>1980年代、ニューヨーク市はアメリカ有数の犯罪多発都市でした。特に地下鉄は落書きだらけで、無賃乗車も横行していました。</p>
+
+            <div class="example-card">
+                <h4>ジュリアーニ市長の「ゼロ・トレランス」政策（1994年〜）</h4>
+                <p>1994年に市長に就任したルドルフ・ジュリアーニは、ケリングを顧問に迎え、割れ窓理論を応用した政策を実施しました。</p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>警察官5,000人増員で街頭パトロール強化</li>
+                    <li><strong>地下鉄の落書きを徹底的に消去</strong></li>
+                    <li>無賃乗車、万引き、違法駐車などの軽犯罪を厳しく取り締まり</li>
+                    <li>歩行者の信号無視（ジェイウォーク）も取り締まり対象に</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h4>驚くべき成果</h4>
+                <table>
+                    <tr>
+                        <th>犯罪の種類</th>
+                        <th>減少率（5年間）</th>
+                    </tr>
+                    <tr>
+                        <td>殺人</td>
+                        <td><strong>67.5%減少</strong></td>
+                    </tr>
+                    <tr>
+                        <td>強盗</td>
+                        <td><strong>54.2%減少</strong></td>
+                    </tr>
+                    <tr>
+                        <td>婦女暴行</td>
+                        <td><strong>27.4%減少</strong></td>
+                    </tr>
+                    <tr>
+                        <td>地下鉄での凶悪犯罪</td>
+                        <td><strong>75%減少</strong></td>
+                    </tr>
+                </table>
+                <p style="margin-top: 10px;">アメリカ全土の犯罪減少率28%に対し、ニューヨークは<strong>56%以上</strong>も減少しました。</p>
+            </div>
+        </div>
+
+        <!-- 日本での実践事例 -->
+        <div class="section">
+            <h2>日本での実践事例</h2>
+
+            <div class="example-card">
+                <h4>札幌・すすきの（2001年〜）</h4>
+                <p>札幌中央署が割れ窓理論を採用。違法駐車を徹底的に取り締まった結果：</p>
+                <ul style="margin-top: 8px; margin-left: 20px;">
+                    <li>路上駐車が<strong>3分の1以下</strong>に減少</li>
+                    <li>地域ボランティアとの協力でパトロール強化</li>
+                    <li>2年間で犯罪<strong>15%減少</strong></li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4>東京都足立区「ビューティフル・ウィンドウズ」</h4>
+                <p>「美しいまち」を印象づけることで犯罪を抑止する取り組み：</p>
+                <ul style="margin-top: 8px; margin-left: 20px;">
+                    <li>地域住民と警察による見回り・パトロール</li>
+                    <li><strong>花壇の整備</strong>、美化活動の推進</li>
+                    <li>放置自転車の防止、シャッターアート</li>
+                    <li>刑法犯罪件数がピーク時から<strong>8割減少</strong></li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4>京都府「割れ窓理論」実践運動（2008年〜）</h4>
+                <p>NPO法人「京都割れ窓理論実践委員会」も設立され、組織的な活動を展開：</p>
+                <ul style="margin-top: 8px; margin-left: 20px;">
+                    <li>商店街の落書き消し</li>
+                    <li>不当な貼り紙の除去</li>
+                    <li>府職員、ボランティア、小学生も参加</li>
+                </ul>
+            </div>
+
+            <div class="example-card">
+                <h4>放置自転車対策</h4>
+                <p>放置自転車は「割れ窓」の典型例として問題視されています：</p>
+                <ul style="margin-top: 8px; margin-left: 20px;">
+                    <li>1981年のピーク時：全国で<strong>98.8万台</strong></li>
+                    <li>2023年現在：約<strong>2.0万台</strong>まで減少</li>
+                    <li>駐輪場整備と撤去活動が効果を発揮</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 東雲地区との関連 -->
+        <div class="section">
+            <h2>東雲地区で起きていること</h2>
+
+            <div class="shinonome-box">
+                <h4>同じ地区内で「自然な対照実験」が発生</h4>
+                <table>
+                    <tr>
+                        <th>場所</th>
+                        <th>環境の状態</th>
+                        <th>問題行動</th>
+                    </tr>
+                    <tr>
+                        <td><strong>キャナルコート18号棟前</strong></td>
+                        <td style="color: #2e7d32;">植栽が整備されている<br>近隣歯科医院が毎朝手入れ</td>
+                        <td style="color: #2e7d32;"><strong>乱横断・違法駐輪なし</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>キャナルファースト前<br>（ガードレール側）</strong></td>
+                        <td style="color: #c62828;">植栽がチープ・未整備</td>
+                        <td style="color: #c62828;"><strong>違法駐輪が常態化</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wコンフォート前</strong></td>
+                        <td style="color: #c62828;">植栽がまばら・連続性なし</td>
+                        <td style="color: #c62828;"><strong>乱横断が常態化</strong></td>
+                    </tr>
+                </table>
+                <p style="margin-top: 15px;"><strong>→ 「きちんと管理されている場所では、身勝手な行為が発生しない」</strong>という割れ窓理論の実例が、東雲地区内で観察されています。</p>
+            </div>
+
+            <!-- 現地写真 -->
+            <h3 style="margin-top: 25px; color: #e65100;">📸 キャナルファースト前歩道の状況</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                <figure class="photo-item">
+                    <a href="images/IMG_6237.JPG" target="_blank">
+                        <img src="images/IMG_6237.JPG" alt="キャナルファースト前歩道④" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
+                    </a>
+                    <figcaption style="text-align: center; color: #666; margin-top: 8px; font-size: 0.9em;">
+                        <span style="color: #c62828;"><strong>キャナルファースト前歩道④</strong></span>（2025年7月撮影）<br>
+                        歩道側は以前から違法駐輪が常態化
+                    </figcaption>
+                </figure>
+                <figure class="photo-item">
+                    <a href="images/IMG_6843.jpg" target="_blank">
+                        <img src="images/IMG_6843.jpg" alt="キャナルファースト前歩道⑤" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
+                    </a>
+                    <figcaption style="text-align: center; color: #666; margin-top: 8px; font-size: 0.9em;">
+                        <span style="color: #c62828;"><strong>キャナルファースト前歩道⑤</strong></span>（2026年1月撮影）<br>
+                        歩道部の植栽はまったく整備されていない
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- ナッジ理論との関係 -->
+        <div class="section">
+            <h2>ナッジ理論との関係</h2>
+
+            <p>割れ窓理論とナッジ理論は、どちらも「環境が行動に影響を与える」という考え方に基づいていますが、アプローチが異なります。</p>
+
+            <table class="comparison-table">
+                <tr>
+                    <th>理論</th>
+                    <th>アプローチ</th>
+                    <th>具体例</th>
+                </tr>
+                <tr>
+                    <td><strong>割れ窓理論</strong></td>
+                    <td>環境の乱れが悪い行動を誘発<br>（抑止的・予防的）</td>
+                    <td>落書きを消す<br>植栽を整備する</td>
+                </tr>
+                <tr>
+                    <td><strong>ナッジ理論</strong></td>
+                    <td>環境設計で良い行動を選びやすく<br>（促進的・誘導的）</td>
+                    <td>足跡ペイント<br>子どもの絵</td>
+                </tr>
+            </table>
+
+            <div class="info-box">
+                <h4>両理論の相乗効果</h4>
+                <p><strong>環境整備（割れ窓）＋ 行動誘導（ナッジ）</strong>の組み合わせが最も効果的です。</p>
+                <p style="margin-top: 10px;">東雲地区の提案でいえば：</p>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li><strong>割れ窓対策：</strong>植栽を整備し「管理されている」環境を作る</li>
+                    <li><strong>ナッジ対策：</strong>子どもの花壇を設置し「踏みたくない」心理を活用</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 批判と注意点 -->
+        <div class="section">
+            <h2>理論への批判と注意点</h2>
+
+            <div class="warning-box">
+                <h4>主な批判</h4>
+                <ul>
+                    <li>ニューヨークの犯罪減少は、割れ窓理論だけでなく景気回復・人口構成の変化など複合的要因による可能性</li>
+                    <li>同時期に他の都市でも犯罪が減少しており、因果関係が不明確</li>
+                    <li>過度な取り締まりが「ゼロ・トレランス」として弱者への抑圧につながる懸念</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>提唱者ケリング自身の見解</h4>
+                <p>ケリングは後年、自らの理論が「単なる厳罰化の正当化」として解釈されることへの懸念を表明しています。</p>
+                <p style="margin-top: 10px;">彼が本来強調したのは、<strong>警察と地域住民が密接に連携し、コミュニティ全体で主体的に秩序維持に取り組むこと</strong>の重要性でした。</p>
+            </div>
+        </div>
+
+        <!-- まとめ -->
+        <div class="section">
+            <h2>まとめ</h2>
+
+            <div class="summary-box">
+                <p>割れ窓理論は「環境の乱れが行動を悪化させる」という考え方。<br><strong>小さな問題を放置せず、美しく管理された環境を保つことで、秩序ある行動を促す</strong>ことができます。</p>
+            </div>
+
+            <p>放置自転車、ゴミのポイ捨て、落書き、違法駐車…こうした「小さな乱れ」を見過ごさず、地域全体で環境を整えていくことが、安全で快適なまちづくりにつながります。</p>
+
+            <p style="margin-top: 15px;">東雲地区の観察からも、<strong>「植栽が整備されている場所では問題行動が発生しない」</strong>ことが確認されています。子どもの花壇を設置し、住民参加で維持管理することは、割れ窓理論から見ても効果的なアプローチと言えます。</p>
+
+            <div class="reference">
+                <h4>参考文献</h4>
+                <ul>
+                    <li>George L. Kelling & James Q. Wilson "Broken Windows" (Atlantic Monthly, 1982)</li>
+                    <li>警察庁『警察白書』平成14年度版</li>
+                    <li>Wikipedia「割れ窓理論」「防犯環境設計」</li>
+                    <li>京都府「割れ窓理論」実践運動</li>
+                    <li>東京都足立区「ビューティフル・ウィンドウズ」</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>東雲地区の交通安全・景観改善プロジェクト 参考資料</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">→ 提案資料に戻る</a> ｜
+                <a href="nudge-theory.html">→ ナッジ理論の解説</a> ｜
+                <a href="desire-path.html">→ Desire Pathの解説</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

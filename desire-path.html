@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザイア・パス（Desire Path）とは - 欲望の小道の形成と対策</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #795548 0%, #8d6e63 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #5d4037;
+            border-bottom: 3px solid #795548;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .section h3 {
+            color: #6d4c41;
+            margin: 20px 0 10px;
+            font-size: 1.1em;
+        }
+
+        .section h4 {
+            color: #795548;
+            margin: 15px 0 8px;
+            font-size: 1em;
+        }
+
+        .highlight-box {
+            background: #efebe9;
+            border-left: 4px solid #795548;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        .highlight-box strong {
+            color: #5d4037;
+        }
+
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-caption {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .image-source {
+            color: #999;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+
+        .example-card {
+            background: #fff;
+            border: 1px solid #d7ccc8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .example-card h4 {
+            color: #5d4037;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .example-card p {
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #efebe9;
+            color: #5d4037;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border: 1px solid #ffb74d;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .warning-box h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .info-box h4 {
+            color: #1565c0;
+            margin-bottom: 8px;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .success-box h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .comic-explanation {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .comic-explanation h4 {
+            color: #5d4037;
+            margin-bottom: 15px;
+        }
+
+        .comic-stage {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .comic-stage strong {
+            color: #795548;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .summary-box p {
+            font-size: 1.1em;
+            color: #5d4037;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .reference {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .reference h4 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .reference ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference li {
+            padding: 5px 0;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        @media print {
+            .header {
+                background: #795548 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>デザイア・パス（Desire Path）とは</h1>
+        <p class="subtitle">欲望の小道の形成メカニズムと対策</p>
+    </div>
+
+    <div class="container">
+        <!-- 概要 -->
+        <div class="section">
+            <h2>概要</h2>
+            <div class="highlight-box">
+                <strong>デザイア・パス</strong>（desire path、欲望の小道）とは、設計された歩道ではなく、人々が自然と歩くことで形成される非公式な通り道のことです。「獣道」や「踏み分け道」とも呼ばれます。
+            </div>
+            <p>各国にはそれぞれ独自の呼び名があります：</p>
+            <ul>
+                <li><strong>ドイツ</strong>：Trampelpfad（踏み固め道）</li>
+                <li><strong>フィンランド</strong>：象の道</li>
+                <li><strong>オランダ</strong>：Olifantenpad（象の小道）</li>
+                <li><strong>日本</strong>：獣道（けものみち）</li>
+            </ul>
+        </div>
+
+        <!-- イラスト解説 -->
+        <div class="section">
+            <h2>イラストで見るデザイア・パスの形成</h2>
+
+            <div class="image-container">
+                <img src="images/report/nudge_pedestrian_report/xpchc40v5qbf1.webp" alt="デザイア・パスの形成と対策を示す12コマ風刺画">
+                <p class="image-caption">デザイア・パスの形成と、それに対する典型的な（そして多くの場合失敗する）対応を風刺的に描いたイラスト</p>
+                <p class="image-source">出典：reddit.com</p>
+            </div>
+
+            <div class="comic-explanation">
+                <h4>12コマのイラスト解説</h4>
+
+                <div class="comic-stage">
+                    <strong>第1段（1〜3コマ目）：デザイア・パスの誕生</strong>
+                    <p>最初は綺麗な芝生と舗装された歩道だけが存在します。しかし、人々は遠回りを嫌い、最短距離を斜めに横切り始めます。繰り返し踏まれることで、黄色く枯れた「道」が自然と出現します。</p>
+                </div>
+
+                <div class="comic-stage">
+                    <strong>第2段（4〜6コマ目）：施設の追加</strong>
+                    <p>ベンチとゴミ箱が設置されます。しかしデザイア・パスは消えません。人々は依然として最短ルートを選び続けます。</p>
+                </div>
+
+                <div class="comic-stage">
+                    <strong>第3段（7〜9コマ目）：「対策」の実施</strong>
+                    <p>管理者は生垣を植えて、デザイア・パスを物理的にブロックしようとします。これは「ユーザーの行動を設計者の意図に従わせよう」という典型的なアプローチです。</p>
+                </div>
+
+                <div class="comic-stage">
+                    <strong>第4段（10〜12コマ目）：人間の勝利</strong>
+                    <p>結果は明らかです。人々は生垣を迂回し、新たなデザイア・パスを作り出します。最終的に、生垣の周りにも道ができてしまいました。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 学術研究 -->
+        <div class="section">
+            <h2>学術研究と形成のメカニズム</h2>
+
+            <h3>形成条件</h3>
+            <p>踏み固め研究（trampling studies）によると、わずか<strong>15回の通行</strong>で目に見える道が形成され始めることが確認されています。</p>
+            <p style="margin-top: 10px;">一度形成された道は「引力効果（attraction effect）」を持ち、他の人々がその道を選ぶことでさらに深くなるという<strong>自己強化的なサイクル</strong>が生まれます。</p>
+
+            <h3>Dirk Helbingの研究（ドイツ）</h3>
+            <p>ドイツの物理学者・数学者であるDirk Helbingは、デザイア・パスの形成条件について定量的な研究を行いました。</p>
+            <div class="info-box">
+                <h4>研究結果</h4>
+                <p>人々は正規ルートが<strong>20〜30%以上長い</strong>場合に、ほぼ確実にショートカットを選択します。</p>
+                <p style="margin-top: 10px;">興味深いことに、この行動は<strong>わずか10メートル程度の距離</strong>でも観察されます。</p>
+            </div>
+
+            <h3>最新の研究動向</h3>
+            <table>
+                <tr>
+                    <th>研究機関</th>
+                    <th>内容</th>
+                </tr>
+                <tr>
+                    <td>テキサス大学アーリントン校</td>
+                    <td>デザイア・パスの「類型（typology）」を開発。都市計画者が設計段階で欠陥を認識するためのフレームワークを提供</td>
+                </tr>
+                <tr>
+                    <td>ScienceDirectに掲載（2025年）</td>
+                    <td>エージェントベースモデリング（ABM）を用いてデザイア・パスの出現を予測するフレームワークを開発</td>
+                </tr>
+                <tr>
+                    <td>ITMO大学（ロシア）</td>
+                    <td>「ANT ROAD PLANNER」というデザイア・パス予測ツールをオンラインで公開</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 世界の事例 -->
+        <div class="section">
+            <h2>世界の事例</h2>
+
+            <div class="example-card">
+                <h4>フィンランド：雪を活用した観察手法</h4>
+                <p>フィンランドの都市計画者は、<strong>初雪の後</strong>に公園を訪れるという独自の伝統を持っています。既存の歩道が雪で隠された状態で、人々が自然に選んだルートが足跡として可視化されます。このデータは、新しい正式な歩道の設計に反映されます。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>ミシガン州立大学（アメリカ）</h4>
+                <p>1914年、大学建築家のJoseph N. Bradfordは<strong>熱気球</strong>に乗り、学生たちが雪の中に刻んだ複雑な網目状の道を上空から観察しました。また同大学では、新しい建物を建設した際に意図的に歩道を設置せず、学生たちが自然に道を作るのを待ってから舗装するというアプローチを採用しています。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>カリフォルニア大学アーバイン校</h4>
+                <p>計画者たちは、キャンパス全体に芝生だけを植え、<strong>1年間</strong>歩道を一切設置しませんでした。その間、学生たちの動きを観察し、パターンを記録。建物間を直線的に結ぶ予測通りの道もあれば、一見不合理に見えるカーブした道もありました。後者は、<strong>日陰を求めたり風の通り道を避けたりする人間の本能</strong>を反映していたのです。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>ニューヨーク：ブロードウェイの起源</h4>
+                <p>マンハッタンのブロードウェイは、アメリカ最古のデザイア・パスの一つとされています。この道は、植民地化以前にネイティブアメリカンが使用していた「<strong>Wickquasgeck Trail</strong>」をなぞっています。沼地や丘を避けて集落間を最短で結ぶこの道は、後にヨーロッパ人入植者によって採用され、現在の大通りへと発展しました。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>セントラルパークの敗北</h4>
+                <p>ニューヨークのセントラルパークは、数十年にわたってデザイア・パスとの戦いを続けました。とげのある茂みを植え、装飾的な岩を配置し、警備員を配置しました。<strong>しかし何も効果がありませんでした。</strong>最終的に管理者は諦め、多くのデザイア・パスを舗装しました。皮肉なことに、設計者が最も激しく抵抗したこれらの道が、現在では公園で最も愛されるルートの一部となっています。</p>
+            </div>
+        </div>
+
+        <!-- 対策とその効果 -->
+        <div class="section">
+            <h2>対策とその効果</h2>
+
+            <h3>従来型の対策（多くの場合、失敗）</h3>
+            <table>
+                <tr>
+                    <th>対策</th>
+                    <th>説明</th>
+                    <th>効果</th>
+                </tr>
+                <tr>
+                    <td><strong>フェンス</strong></td>
+                    <td>物理的な障壁を設置</td>
+                    <td>迂回路が形成されることが多い</td>
+                </tr>
+                <tr>
+                    <td><strong>生垣・植栽</strong></td>
+                    <td>密集した植物でブロック</td>
+                    <td>イラストが示すように、周囲に新たな道ができる</td>
+                </tr>
+                <tr>
+                    <td><strong>看板</strong></td>
+                    <td>「芝生に入らないでください」等</td>
+                    <td>研究によると、設置後数ヶ月で使用率が<strong>4倍に増加</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>再芝生化</strong></td>
+                    <td>道を塞いで芝生を植え直す</td>
+                    <td>一時的な解決に過ぎず、再び道が形成される</td>
+                </tr>
+            </table>
+
+            <div class="warning-box">
+                <h4>なぜ従来型対策は失敗するのか</h4>
+                <p>「ユーザーの行動を設計者の意図に従わせよう」というアプローチは、<strong>人間の本能的な最短経路選好</strong>に逆らっているため、多くの場合失敗します。</p>
+            </div>
+
+            <h3>現代的アプローチ：「舗装する」</h3>
+            <p>より効果的なアプローチは、デザイア・パスを「問題」ではなく<strong>「フィードバック」</strong>として受け入れることです。</p>
+
+            <div class="success-box">
+                <h4>効果的な手法</h4>
+                <ol>
+                    <li><strong>観察期間の設定</strong>：新しい空間を開発する際、最初は歩道を設置せず、人々の動きを観察する</li>
+                    <li><strong>データ収集</strong>：航空写真、衛星データ、地上調査を組み合わせて歩行パターンを記録</li>
+                    <li><strong>段階的な舗装</strong>：使用頻度の高いデザイア・パスから順に正式な歩道として整備</li>
+                    <li><strong>材質の使い分け</strong>：低トラフィックの道には砂利、高トラフィックの道にはアスファルトやコンクリート</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ナッジ理論との関係 -->
+        <div class="section">
+            <h2>ナッジ理論との関係</h2>
+
+            <p>デザイア・パスの考え方は、<strong>ナッジ理論</strong>と密接に関連しています。</p>
+
+            <div class="info-box">
+                <h4>共通する考え方</h4>
+                <p>どちらも「人々を設計に従わせる」のではなく、<strong>「人々の自然な行動に設計を合わせる」</strong>というアプローチを取ります。</p>
+            </div>
+
+            <h3>実践例：パリ・シャンゼリゼ通り再開発計画</h3>
+            <p>ナッジ理論がデザイア・パスの考え方と組み合わされています。車線を徐々に狭め、自転車・歩行者用スペースを拡大することで、人々の行動を<strong>強制ではなく誘導</strong>によって変えようとしています。</p>
+        </div>
+
+        <!-- 他分野への応用 -->
+        <div class="section">
+            <h2>他分野への応用</h2>
+
+            <h3>UX/UIデザイン</h3>
+            <p>デザイア・パスの概念は、デジタル設計の世界でも重要な示唆を与えています。ユーザーが「想定外の使い方」をする場合、それは<strong>バグではなく、設計改善のヒント</strong>です。</p>
+
+            <div class="example-card">
+                <h4>実例：Twitterのハッシュタグ</h4>
+                <p>Twitterの「#（ハッシュタグ）」や「@（メンション）」は、当初は公式機能ではありませんでした。ユーザーがIRC（Internet Relay Chat）の慣習を持ち込んで自然発生的に使い始め、後にTwitterが公式機能として採用しました。これはまさに<strong>デジタル空間における「舗装されたデザイア・パス」</strong>です。</p>
+            </div>
+
+            <h3>ソフトウェア開発</h3>
+            <p>ソフトウェアにおける「デザイア・パス」とは、ツールが設計された使い方と、人々が実際に使う方法との差異を指します。優れた開発チームは、ユーザーの「ワークアラウンド」や「予期しない機能の使用」を観察し、製品改善に活かしています。</p>
+        </div>
+
+        <!-- まとめ -->
+        <div class="section">
+            <h2>まとめ</h2>
+
+            <div class="summary-box">
+                <p>優れた設計とは、<strong>人々を設計に従わせることではなく、人々の自然な行動に設計を合わせること</strong>です。</p>
+            </div>
+
+            <p>このイラストは、人間の行動を無視した設計がいかに無駄であるかを端的に表現しています。デザイア・パスは、設計者への<strong>自然からのメッセージ</strong>なのです。</p>
+
+            <p style="margin-top: 15px;">フィンランドの都市計画者が雪の上の足跡を観察するように、私たちも「ユーザーがどう行動するか」に耳を傾ける必要があります。</p>
+
+            <div class="highlight-box" style="margin-top: 20px;">
+                <p style="font-style: italic;">「人々が実際にどう行動するか」を観察することは、「人々がどう行動すべきか」を決めつけることよりも、はるかに価値がある。</p>
+            </div>
+
+            <div class="reference">
+                <h4>参考文献・リソース</h4>
+                <ul>
+                    <li>99% Invisible: "Least Resistance: How Desire Paths Can Lead to Better Design"</li>
+                    <li>University of Wisconsin-Madison: "Desire paths: the unofficial footpaths that frustrate, captivate campus planners"</li>
+                    <li>ITMO University: "ANT ROAD PLANNER" - デザイア・パス予測ツール</li>
+                    <li>ScienceDirectに掲載のABM研究（2025年）</li>
+                    <li>テキサス大学アーリントン校：キャンパスマスタープラン研究</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>東雲地区の交通安全・景観改善プロジェクト 参考資料</p>
+        </div>
+    </div>
+</body>
+</html>

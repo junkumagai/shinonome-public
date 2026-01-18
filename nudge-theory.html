@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ナッジ理論とは？ - 中学生にもわかる解説</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #388e3c;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .section h3 {
+            color: #2e7d32;
+            margin: 20px 0 10px;
+            font-size: 1.1em;
+        }
+
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        .highlight-box strong {
+            color: #2e7d32;
+        }
+
+        .example-card {
+            background: #fff;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .example-card h4 {
+            color: #388e3c;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .example-card p {
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background: #fff3e0;
+            border: 1px solid #ffb74d;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .warning-box h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+
+        .warning-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .info-box h4 {
+            color: #1565c0;
+            margin-bottom: 8px;
+        }
+
+        .rules-list {
+            background: #f3e5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .rules-list ol {
+            margin-left: 20px;
+        }
+
+        .rules-list li {
+            margin: 10px 0;
+        }
+
+        .rules-list strong {
+            color: #7b1fa2;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .summary-box p {
+            font-size: 1.1em;
+            color: #2e7d32;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .reference {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .reference h4 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .reference ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference li {
+            padding: 5px 0;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        @media print {
+            .header {
+                background: #4caf50 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ナッジ理論とは？</h1>
+        <p class="subtitle">中学生にもわかる行動経済学の基礎</p>
+    </div>
+
+    <div class="container">
+        <!-- ひとことで言うと -->
+        <div class="section">
+            <h2>ひとことで言うと</h2>
+            <div class="highlight-box">
+                <strong>「人を強制せずに、そっと背中を押して、より良い選択へ導く工夫」</strong> のことです。
+            </div>
+            <p>「ナッジ（nudge）」は英語で「ひじで軽くつつく」という意味。命令したり罰を与えたりせず、さりげなく行動を変えてもらう方法です。</p>
+        </div>
+
+        <!-- 誕生と背景 -->
+        <div class="section">
+            <h2>誕生と背景</h2>
+            <p>この理論は、アメリカの経済学者<strong>リチャード・セイラー</strong>と法学者<strong>キャス・サンスティーン</strong>が2008年に出版した本『Nudge』で広まりました。セイラーはこの研究で<strong>2017年にノーベル経済学賞</strong>を受賞しています。</p>
+
+            <div class="info-box">
+                <h4>従来の考え方との違い</h4>
+                <p>従来の経済学では「人間は常に合理的に最善の選択をする」と考えられていましたが、実際には人間は面倒くさがったり、目先の誘惑に負けたり、なんとなくで決めてしまうことが多いですよね。</p>
+                <p style="margin-top: 10px;">ナッジ理論は、そうした<strong>人間の「クセ」を理解した上で、良い方向に誘導する</strong>という発想です。</p>
+            </div>
+        </div>
+
+        <!-- 身近な例10選 -->
+        <div class="section">
+            <h2>身近なナッジの例10選</h2>
+
+            <div class="example-card">
+                <h4>1. コンビニのレジ前の足跡マーク</h4>
+                <p>床に足跡のシールが貼ってあると、自然とそこに並びますよね。「ここに並べ！」と言われなくても、みんなきれいに列を作れます。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>2. 階段をピアノの鍵盤にする</h4>
+                <p>スウェーデンの地下鉄で、階段をピアノの鍵盤のようにして踏むと音が鳴るようにしたところ、エスカレーターより階段を使う人が<strong>66%増加</strong>。楽しさで健康的な行動を促す好例です。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>3. 小さいお皿を使う</h4>
+                <p>ビュッフェで小さいお皿を使うと、自然と取る量が減り、食べ過ぎ防止になります。食べ放題のお店やホテルの朝食などで活用されています。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>4. トイレの「的」</h4>
+                <p>男性用トイレの便器にハエの絵を描いたところ、そこを狙うようになり、床の汚れが<strong>80%減少</strong>（オランダ・スキポール空港の有名な事例）。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>5. 初期設定（デフォルト）の活用</h4>
+                <p>臓器提供の意思表示で、「提供しない」を選ばない限り自動的に「提供する」になっている国では、提供率が非常に高くなります。人は初期設定をそのまま受け入れやすい傾向があります。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>6. カフェテリアの食品配置</h4>
+                <p>学校や社員食堂で、サラダや果物を目線の高さや取りやすい場所に置き、揚げ物やデザートを奥に配置すると、健康的な食品を選ぶ人が増えます。Google社の社員食堂でも実践されています。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>7. 電気使用量の比較表示</h4>
+                <p>電気料金の明細に「あなたの使用量」と「近所の平均使用量」を並べて表示すると、平均より多い家庭は節電するようになります。「みんなはこれくらい」という社会的比較が行動を変えます。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>8. 貯金の自動天引き</h4>
+                <p>給料から自動的に貯金が引かれる仕組みにすると、「面倒だから今月はいいや」がなくなり、確実に貯金できます。「何もしなければ貯金される」というデフォルト設定の力です。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>9. ゴミ箱のデザインと配置</h4>
+                <p>バスケットボールのゴールの形をしたゴミ箱を置くと、ゴミを投げ入れたくなり、ポイ捨てが減ります。また、ゴミ箱を目立つ場所に多く設置するだけでも、街のゴミは減少します。</p>
+            </div>
+
+            <div class="example-card">
+                <h4>10. 禁煙エリアの「見える化」</h4>
+                <p>地面に大きく禁煙マークを描いたり、喫煙所を明確に区切ることで、ルールを「見える化」すると、わざわざ注意しなくても喫煙マナーが改善します。</p>
+            </div>
+        </div>
+
+        <!-- ナッジが効く理由 -->
+        <div class="section">
+            <h2>ナッジが効く理由（人間の心理的クセ）</h2>
+
+            <table>
+                <tr>
+                    <th>心理的クセ</th>
+                    <th>説明</th>
+                    <th>ナッジでの活用</th>
+                </tr>
+                <tr>
+                    <td><strong>現状維持バイアス</strong></td>
+                    <td>今のままでいいや、と思いがち</td>
+                    <td>良い選択を「初期設定」にする</td>
+                </tr>
+                <tr>
+                    <td><strong>社会的証明</strong></td>
+                    <td>みんながやってると自分もやりたくなる</td>
+                    <td>「○○%の人が選んでいます」と表示</td>
+                </tr>
+                <tr>
+                    <td><strong>損失回避</strong></td>
+                    <td>得するより損したくない気持ちが強い</td>
+                    <td>「今やらないと損ですよ」と伝える</td>
+                </tr>
+                <tr>
+                    <td><strong>選択の簡略化</strong></td>
+                    <td>選択肢が多すぎると選べない</td>
+                    <td>おすすめを絞って提示する</td>
+                </tr>
+                <tr>
+                    <td><strong>フレーミング効果</strong></td>
+                    <td>同じ内容でも表現で印象が変わる</td>
+                    <td>「成功率90%」と「失敗率10%」の違い</td>
+                </tr>
+                <tr>
+                    <td><strong>アンカリング</strong></td>
+                    <td>最初に見た数字に引っ張られる</td>
+                    <td>寄付金額の選択肢を高めに設定</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ナッジの大切なルール -->
+        <div class="section">
+            <h2>ナッジの大切なルール</h2>
+
+            <p>ナッジには守るべき原則があります。</p>
+
+            <div class="rules-list">
+                <ol>
+                    <li><strong>強制しない</strong> ― あくまで選択の自由は残す</li>
+                    <li><strong>透明性がある</strong> ― こっそり騙すのではなく、知られても問題ない方法で行う</li>
+                    <li><strong>本人のためになる</strong> ― 誘導先が本人や社会にとって良いことである</li>
+                </ol>
+            </div>
+
+            <p>悪用すれば「ダークナッジ」や「スラッジ（sludge）」と呼ばれ、批判の対象になります。</p>
+
+            <div class="warning-box">
+                <h4>ダークナッジ・スラッジの例</h4>
+                <ul>
+                    <li>サブスクリプションの解約手続きをわざと複雑にする</li>
+                    <li>「あと3人が見ています！」と焦らせて衝動買いさせる</li>
+                    <li>小さい文字で不利な条件を隠す</li>
+                    <li>チェックボックスを最初からオンにしてメルマガ登録させる</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- まとめ -->
+        <div class="section">
+            <h2>まとめ</h2>
+
+            <div class="summary-box">
+                <p>ナッジ理論は「人間は完璧じゃない」ということを前提に、<br><strong>環境や選択肢の見せ方を工夫することで、無理なく良い行動を引き出す</strong>考え方です。</p>
+            </div>
+
+            <p>学校の掃除当番表、ゴミ箱の配置、アプリのデザイン、スーパーの商品棚など、実はあなたの身の回りにもたくさんのナッジが使われています。</p>
+
+            <p style="margin-top: 15px;">ナッジを知ることで、自分が誘導されていることに気づけるようになり、また自分自身や周りの人の行動をより良くするヒントも得られます。</p>
+
+            <div class="reference">
+                <h4>参考文献</h4>
+                <ul>
+                    <li>リチャード・セイラー、キャス・サンスティーン『実践 行動経済学』（原題：Nudge）</li>
+                    <li>行動経済学会</li>
+                    <li>各国政府のナッジ・ユニット（英国BIT、米国SBST など）</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>東雲地区の交通安全・景観改善プロジェクト 参考資料</p>
+        </div>
+    </div>
+</body>
+</html>
