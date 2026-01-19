@@ -125,21 +125,27 @@
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
+            font-size: 0.9em;
         }
 
         th, td {
             border: 1px solid #ddd;
-            padding: 12px;
+            padding: 10px;
             text-align: left;
         }
 
         th {
             background: #e3f2fd;
             color: #1565c0;
+            font-weight: bold;
         }
 
         tr:nth-child(even) {
             background: #fafafa;
+        }
+
+        figcaption {
+            font-size: 0.8em;
         }
 
         .key-message {
@@ -192,6 +198,23 @@
             .header h1 {
                 font-size: 1.4em;
             }
+
+            table {
+                font-size: 0.8em;
+            }
+
+            th, td {
+                padding: 6px;
+            }
+
+            figcaption {
+                font-size: 0.75em;
+            }
+
+            .info-box, .problem-box, .solution-box {
+                padding: 12px;
+                font-size: 0.9em;
+            }
         }
 
         @media print {
@@ -231,10 +254,10 @@
                     <a href="images/Screenshot_2026-01-17_09-48-29.png" target="_blank">
                         <img src="images/Screenshot_2026-01-17_09-48-29.png" alt="問題発生エリアのマップ" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer;">
                     </a>
-                    <figcaption style="text-align: center; color: #555; margin-top: 12px; font-size: 0.95em; line-height: 1.6;">
-                        <strong>問題エリアマップ</strong>（東雲キャナルコートCODAN 11号棟周辺）<br>
-                        <span style="color: #c62828;">🔴 赤矢印：<strong>乱横断</strong></span>（ガードレールをすり抜けて道路横断）<br>
-                        <span style="color: #f9a825;">🟡 黄矢印：<strong>植栽踏み抜き</strong></span>（Desire Path＝欲望の小道の形成）
+                    <figcaption style="text-align: center; color: #555; margin-top: 12px; font-size: 0.85em; line-height: 1.6;">
+                        <strong>問題エリアマップ</strong>（東雲キャナルコートCODAN 南側）<br>
+                        <span style="color: #ff1493;">■</span> 赤矢印：<strong>乱横断</strong>（ガードレールをすり抜け）<br>
+                        <span style="color: #ffff00; text-shadow: 0 0 2px #000;">■</span> 黄矢印：<strong>植栽踏み抜き</strong>（Desire Path）
                     </figcaption>
                 </figure>
             </div>
@@ -447,30 +470,20 @@
 
             <!-- 課題①への対策：乱横断 -->
             <div class="solution-box" style="border-left: 4px solid #1565c0;">
-                <h4>🚧 課題①への対策：ガードレールすり抜け・乱横断（区道側・江東区管轄）</h4>
-                <p><strong>「足跡ペイント」による視覚的誘導</strong></p>
-                <table style="margin-top: 10px;">
-                    <tr>
-                        <th>施策</th>
-                        <th>内容</th>
-                        <th>先行事例</th>
-                    </tr>
-                    <tr>
-                        <td><strong>👣 足跡ペイント</strong></td>
-                        <td>正規の横断歩道へ誘導する足跡デザインを路面に設置</td>
-                        <td>コペンハーゲン「グリーンフットプリント」：ポイ捨て<strong>46%減</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>🎨 路面アート</strong></td>
-                        <td>ガードレール周辺の路面に子どもの絵・交通安全メッセージを設置</td>
-                        <td>静岡市・川崎市：子どもの絵で違法駐輪抑止</td>
-                    </tr>
-                    <tr>
-                        <td><strong>📋 社会的証明表示</strong></td>
-                        <td>「この道を利用する95%の方が横断歩道を使っています」等の表示</td>
-                        <td>行動経済学：社会的証明によるナッジ効果</td>
-                    </tr>
-                </table>
+                <h4>課題①への対策：ガードレールすり抜け・乱横断（区道側・江東区管轄）</h4>
+
+                <h5 style="color: #1565c0; margin: 15px 0 8px;">施策A：足跡ペイント</h5>
+                <p>正規の横断歩道へ誘導する足跡デザインを路面に設置</p>
+                <p style="color: #666; font-size: 0.9em;">先行事例：コペンハーゲン「グリーンフットプリント」でポイ捨て46%減</p>
+
+                <h5 style="color: #1565c0; margin: 15px 0 8px;">施策B：路面アート</h5>
+                <p>ガードレール周辺の路面に子どもの絵・交通安全メッセージを設置</p>
+                <p style="color: #666; font-size: 0.9em;">先行事例：静岡市・川崎市で子どもの絵による違法駐輪抑止</p>
+
+                <h5 style="color: #1565c0; margin: 15px 0 8px;">施策C：社会的証明表示</h5>
+                <p>「この道を利用する95%の方が横断歩道を使っています」等の表示</p>
+                <p style="color: #666; font-size: 0.9em;">先行事例：行動経済学における社会的証明のナッジ効果</p>
+
                 <div class="info-box" style="margin-top: 15px;">
                     <h4>なぜ「看板」ではなく「足跡ペイント」なのか</h4>
                     <p>従来の「横断禁止」看板は<strong>禁止・命令</strong>のメッセージ。心理的反発を生みやすい。</p>
@@ -480,26 +493,16 @@
 
             <!-- 課題②への対策：植栽踏み抜き -->
             <div class="solution-box" style="border-left: 4px solid #2e7d32; margin-top: 20px;">
-                <h4>🌷 課題②への対策：植栽踏み抜き・Desire Path（キャナルコート側・東急住宅リース管轄）</h4>
-                <p><strong>「子どもたちの花壇」× コミュニティガーデン</strong></p>
-                <p style="margin-top: 10px; font-size: 1.1em; color: #2e7d32;"><strong>「近隣の小中学校の子どもたちが育てた花壇を、大人が踏んでショートカットするのか？」</strong></p>
-                <table style="margin-top: 10px;">
-                    <tr>
-                        <th>施策</th>
-                        <th>内容</th>
-                        <th>期待効果</th>
-                    </tr>
-                    <tr>
-                        <td><strong>🌷 子どもの花壇</strong></td>
-                        <td>踏み抜きエリアに花壇を設置。近隣の小中学校が授業の一環で管理</td>
-                        <td>「子どもの作品を踏む」心理的抵抗で踏み抜き抑止</td>
-                    </tr>
-                    <tr>
-                        <td><strong>📸 フォトスポット化</strong></td>
-                        <td>季節の花壇を「映える」スポットとして整備</td>
-                        <td>街のブランド価値向上、地域への愛着形成</td>
-                    </tr>
-                </table>
+                <h4>課題②への対策：植栽踏み抜き・Desire Path（キャナルコート側・東急住宅リース管轄）</h4>
+                <p style="margin-top: 10px; color: #2e7d32;"><strong>「近隣の小中学校の子どもたちが育てた花壇を、大人が踏んでショートカットするのか？」</strong></p>
+
+                <h5 style="color: #2e7d32; margin: 15px 0 8px;">施策A：子どもの花壇</h5>
+                <p>踏み抜きエリアに花壇を設置。近隣の小中学校が授業の一環で管理</p>
+                <p style="color: #666; font-size: 0.9em;">期待効果：「子どもの作品を踏む」心理的抵抗で踏み抜き抑止</p>
+
+                <h5 style="color: #2e7d32; margin: 15px 0 8px;">施策B：フォトスポット化</h5>
+                <p>季節の花壇を「映える」スポットとして整備</p>
+                <p style="color: #666; font-size: 0.9em;">期待効果：街のブランド価値向上、地域への愛着形成</p>
             </div>
 
             <!-- 官民連携の仕組み -->
@@ -638,8 +641,10 @@
 
         <!-- キーメッセージ -->
         <div class="key-message">
-            <h2>官民連携による「予防的措置」</h2>
-            <p>事故が起きてから対策するのではなく、地域・学校・行政・民間事業者が連携して今から行動することが重要です。</p>
+            <h2>官民連携で再び街づくり</h2>
+            <p>乱横断、植栽踏み抜き、違法駐輪…一つ一つは小さな問題かもしれません。</p>
+            <p style="margin-top: 10px;">しかし再開発から20年が経過し、当初の設計とは異なる住民行動が発生しています。<br>きちんと管理されている場所では問題が起きにくいこともわかりました。</p>
+            <p style="margin-top: 10px;">小さな問題を放置すればいずれ大きな問題に。<br><strong>再び住みやすい街にするには、他の地区での知見をもつ議員の力が必要です。</strong></p>
         </div>
 
         <div class="footer">
